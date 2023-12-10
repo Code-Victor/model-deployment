@@ -23,7 +23,3 @@ def predict():
     vectorized_text = vectorizer.transform([text])
     prediction = model.predict(vectorized_text)[0]
     return jsonify({"sentiment": prediction})
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
